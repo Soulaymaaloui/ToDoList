@@ -1,0 +1,107 @@
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.App{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    padding: 40px;
+    margin: 20px auto;
+    transform: translate(-50%, -55%);
+    background-color:#b16bda;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    border-radius: 10px;
+  
+}
+.todocontainer{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.todocontainer ul li {
+    width: 180px;
+    overflow-wrap: break-word ;
+    list-style-type:"👉";
+    cursor:pointer;
+}
+.todo-input {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    padding: 1em;
+    background-color:#ffffff;
+    box-shadow: inset 2px 5px 10px rgba(240,240,240);
+    transition: 300ms ease-in-out;
+  }
+  .todo-input:focus {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 
+    13px 13px 100px rgba(240, 240, 240, 0.5),
+    -13px -13px 100px rgba(255, 255, 255, 0.5);
+  } 
+
+  .todo-button  {
+    margin-top: 10px;
+    width: 320px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #b16bda;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+   background-color: #ffffff;
+
+   }
+   
+   .todo-button::before,
+   .todo-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   .todo-button::before {
+    left: -10px;
+    background:#cc86f1;
+   }
+   
+   .todo-button::after {
+    right: -10px;
+    background: #e0aaff;
+   }
+   
+   .todo-button:hover::before,
+   .todo-button:hover::after {
+    width: 58%;
+   }
+   
+   .todo-button:hover span {
+    color: #e0aaff;
+    transition: 0.3s;
+   }
+   
+  .done{
+    text-decoration: line-through;
+  }
+  .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .delete{
+ cursor: pointer;
+}
+ 
